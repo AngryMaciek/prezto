@@ -14,6 +14,7 @@ Modified files:
 |-|-|
 | ./README.md | add header and notes |
 | ./runcoms/zshrc | add section with personal customization |
+| ./runcoms/zpreztorc | configure modules |
 
 References:  
 * https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
