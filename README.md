@@ -21,7 +21,6 @@ References:
 * http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
 
 ---
----
 
 Prezto — Instantly Awesome Zsh
 ==============================
