@@ -15,11 +15,17 @@ Modified files:
 | ./README.md | add header and notes |
 | ./runcoms/zshrc | add section with personal customization |
 | ./runcoms/zpreztorc | configure modules |
+| ./modules/prompt/functions/prompt_maciek_setup | add custom prompt |
 
 References:  
 * https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
 * https://blog.siddharthkannan.in/shell/zsh/prezto/2019/04/06/oh-my-zsh-to-prezto/
 * http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
+* http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
+
+Missing:
+* prompt customization
+* LS_COLORS customization
 
 ---
 
