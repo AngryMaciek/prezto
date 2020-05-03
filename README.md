@@ -1,3 +1,28 @@
+#### My personal fork of Prezto
+
+*Maciej Bak*  
+*Swiss Institute of Bioinformatics*
+
+Includes my configuration and extensions setup for the Zsh.  
+Original repository: https://github.com/sorin-ionescu/prezto  
+Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
+
+Please follow installation instructions described in the original README.md file (below). Whenever neccessary substitute the address to the original repository with an address of this fork.
+
+Modified files:
+| Path | Description |
+|-|-|
+| ./README.md | add header and notes |
+| ./runcoms/zshrc | add section with personal customization |
+
+References:  
+* https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
+* https://blog.siddharthkannan.in/shell/zsh/prezto/2019/04/06/oh-my-zsh-to-prezto/
+* http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
+
+---
+---
+
 Prezto — Instantly Awesome Zsh
 ==============================
 
