@@ -11,3 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# ========================================
+# Personal coniguration for the shell
+# Maciek Bak
+# ========================================
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lk='ls -lhSr' #  Sort by size, biggest last.
