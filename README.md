@@ -15,6 +15,8 @@ Modified files:
 | ./README.md | add header and notes |
 | ./runcoms/zshrc | add section with personal customization |
 | ./runcoms/zpreztorc | configure modules |
+| ./runcoms/zlogin | comment message print |
+| ./runcoms/zlogout | comment message print |
 | ./modules/prompt/functions/prompt_maciek_setup | add custom prompt |
 
 References:  
