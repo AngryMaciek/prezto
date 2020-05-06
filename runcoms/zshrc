@@ -17,15 +17,11 @@ fi
 # Maciek Bak
 # ========================================
 
-# ls
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 alias lk='ls -lhSr' #  Sort by size, biggest last.
 
 # tmux
 alias tma='tmux attach -d -t'
-alias tmn='tmux new -s $(basename $(pwd))'
+alias tmn='tmux new -s'
 alias tml='tmux list-sessions'
 
 # if miniconda is installed
