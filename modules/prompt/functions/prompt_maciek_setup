@@ -1,5 +1,15 @@
+function check_conda_env {
+    if [ ! -z "$CONDA_DEFAULT_ENV" ]; then
+        printf -- "%s" "%B[$CONDA_DEFAULT_ENV]%b"
+    else
+        printf -- "%s" ""
+    fi
+}
+
 function prompt_maciek_precmd {
-  git-info
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
 }
 
 function prompt_maciek_setup {
@@ -13,17 +23,29 @@ function prompt_maciek_setup {
   # Add hook for calling git-info before each command.
   add-zsh-hook precmd prompt_maciek_precmd
 
+   # Tell prezto we can manage this prompt
+  zstyle ':prezto:module:prompt' managed 'yes'
+
+  # Define custom colors
+  my_white="%F{white}"
+  my_red="%F{red}"
+  my_blue="%F{blue}"
+  my_green="%F{green}"
+  my_yellow="%F{yellow}"
+  my_cyan="%F{cyan}"
+
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
+  zstyle ':prezto:module:git:info:branch' format '%F{cyan}%b%f'
   zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
+  zstyle ':prezto:module:git:info:behind' format ' %F{yellow}✔%f'
   zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
   zstyle ':prezto:module:git:info:keys' format \
-    'prompt' ' %F{green}(%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green})%f' \
-    'rprompt' '%C%D'
+    'prompt' ' %F{green}%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green}%f' \
+    'rprompt' '%C%D%B'
 
   # Define prompts.
-  PROMPT='%~${(e)git_info[prompt]}$ '
+  PROMPT='$(check_conda_env) %B${my_red}%n%F{blue}@${my_green}%m%f %F${my_yellow}%~${(e)git_info[prompt]}$prompt_newline%f%b$ '
   RPROMPT=''
 }
 

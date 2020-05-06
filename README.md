@@ -22,15 +22,15 @@ Modified files:
 References:  
 * https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
 * https://blog.siddharthkannan.in/shell/zsh/prezto/2019/04/06/oh-my-zsh-to-prezto/
+* https://scriptingosx.com/2019/06/moving-to-zsh/
 * http://jeromedalbert.com/migrate-from-oh-my-zsh-to-prezto/
 * http://jr0cket.co.uk/2013/09/hey-prezto-zsh-for-command-line-heaven.html
 * https://wikimatze.de/better-zsh-with-prezto/
 * http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
 
 Missing:
-* prompt customization
+* prompt customization: git (change symbols)
 * LS_COLORS customization
-* remove special symbols from git <?>
 * test on Ubuntu
 
 ---
