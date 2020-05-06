@@ -28,10 +28,6 @@ References:
 * https://wikimatze.de/better-zsh-with-prezto/
 * http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
 
-Missing:
-* LS_COLORS customization
-* test on Ubuntu
-
 ---
 
 Prezto — Instantly Awesome Zsh
