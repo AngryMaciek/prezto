@@ -18,6 +18,8 @@ Modified files:
 | ./runcoms/zlogin | comment message print |
 | ./runcoms/zlogout | comment message print |
 | ./modules/prompt/functions/prompt_maciek_setup | add custom prompt |
+| ./modules/completion/init.zsh | comment coloring |
+| ./modules/utility/init.zsh | comment coloring |
 
 References:  
 * https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
