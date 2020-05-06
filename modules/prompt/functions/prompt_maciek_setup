@@ -1,9 +1,9 @@
 function check_conda_env {
-    if [ ! -z "$CONDA_DEFAULT_ENV" ]; then
-        printf -- "%s" "%B[$CONDA_DEFAULT_ENV]%b"
-    else
-        printf -- "%s" ""
-    fi
+  if [ ! -z "$CONDA_DEFAULT_ENV" ]; then
+    printf -- "%s" "%B[$CONDA_DEFAULT_ENV]%b"
+  else
+    printf -- "%s" ""
+  fi
 }
 
 function prompt_maciek_precmd {
@@ -36,16 +36,22 @@ function prompt_maciek_setup {
 
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:branch' format '%F{cyan}%b%f'
-  zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
-  zstyle ':prezto:module:git:info:behind' format ' %F{yellow}✔%f'
-  zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
+  zstyle ':prezto:module:git:info:branch' format '%F${my_cyan}%b%f'
+  zstyle ':prezto:module:git:info:ahead' format '%F${my_cyan}>%f'
+  zstyle ':prezto:module:git:info:behind' format '%F${my_cyan}<%f'
+  zstyle ':prezto:module:git:info:added' format '%F${my_cyan}+%f'
+  zstyle ':prezto:module:git:info:deleted' format '%F${my_cyan}-%f'
+  zstyle ':prezto:module:git:info:modified' format '%F${my_cyan}#%f'
+  zstyle ':prezto:module:git:info:renamed' format '%F${my_cyan}*%f'
+  zstyle ':prezto:module:git:info:untracked' format '%F${my_cyan}?%f'
+  zstyle ':prezto:module:git:info:clean' format '%F${my_green}o%f'
+  zstyle ':prezto:module:git:info:dirty' format '%F${my_red}x%f'
   zstyle ':prezto:module:git:info:keys' format \
-    'prompt' ' %F{green}%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F{green}%f' \
-    'rprompt' '%C%D%B'
+    'prompt' '%b %m%a%d%u%r%A%B %C%D' \
+    'rprompt' ''
 
   # Define prompts.
-  PROMPT='$(check_conda_env) %B${my_red}%n%F{blue}@${my_green}%m%f %F${my_yellow}%~${(e)git_info[prompt]}$prompt_newline%f%b$ '
+  PROMPT='$(check_conda_env) %B${my_red}%n%F{blue}@${my_green}%m%f %F${my_yellow}%~ ${(e)git_info[prompt]}$prompt_newline%f%b$ '
   RPROMPT=''
 }
 

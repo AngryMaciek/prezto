@@ -29,7 +29,6 @@ References:
 * http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/
 
 Missing:
-* prompt customization: git (change symbols)
 * LS_COLORS customization
 * test on Ubuntu
 
