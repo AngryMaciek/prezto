@@ -36,9 +36,3 @@ alias lk='ls -lhSr' #  Sort by size, biggest last.
 alias tma='tmux attach -d -t'
 alias tmn='tmux new -s'
 alias tml='tmux list-sessions'
-
-# if miniconda is installed
-#if [ -f "$HOME/miniconda3/bin/conda" ]; then
-#  # do not modify prompt automatically
-#  conda config --set changeps1 False
-#fi

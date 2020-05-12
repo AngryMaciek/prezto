@@ -1,7 +1,6 @@
 function check_conda_env {
   if [ ! -z "$CONDA_DEFAULT_ENV" ]; then
     printf -- "%s" "%B[$CONDA_DEFAULT_ENV]%b "
-    conda config --set changeps1 False
   else
     printf -- "%s" ""
   fi
