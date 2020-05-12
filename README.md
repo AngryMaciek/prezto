@@ -23,6 +23,8 @@ Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
   conda config --set changeps1 False
 ```
 
+In case of questions please refer to the original Prezto Readme file (below).
+
 #### Modified files:
 | Path | Description |
 |-|-|
