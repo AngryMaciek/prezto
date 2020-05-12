@@ -9,6 +9,9 @@ Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
 
 #### Installation
 ```sh
+  # open Zsh in home dir:
+  cd $HOME
+  zsh
   # clone the repo:
   git clone --recursive https://github.com/AngryMaciek/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
   # create links to dotfiles:
@@ -16,7 +19,7 @@ Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
   for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
   done
-  # If conda is installed - disable PS1 modification:
+  # if conda is installed - disable PS1 modification:
   conda config --set changeps1 False
 ```
 
