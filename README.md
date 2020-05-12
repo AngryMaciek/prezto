@@ -19,12 +19,13 @@ Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
   for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
   done
-  # The following steps are required for this shell to cooperate with conda:
+  # The following two steps are required for this shell to cooperate with conda:
   # (execute commands under the shell that recognises conda)
   # 1) initialise conda for zsh:
   conda init zsh
   # 2) disable PS1 modification:
   conda config --set changeps1 False
+  # Finally - restart the Zsh
 ```
 
 In case of questions please refer to the original Prezto Readme file (below).
