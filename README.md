@@ -8,7 +8,7 @@ Original repository: https://github.com/sorin-ionescu/prezto
 Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
 
 #### Installation
-```console
+```sh
   # clone the repo:
   git clone --recursive https://github.com/AngryMaciek/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
   # create links to dotfiles:
