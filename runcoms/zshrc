@@ -17,6 +17,19 @@ fi
 # Maciek Bak
 # ========================================
 
+# Conda clobbers HOST, so we save the real hostname into another variable.
+# https://github.com/conda/conda/issues/7031
+HOSTNAME="$(hostname)"  
+precmd() {
+    OLDHOST="${HOST}"
+    HOST="${HOSTNAME}"
+}
+preexec() {
+    HOST="${OLDHOST}"
+}
+# precmd runs right before the prompt is drawn
+# preexec runs right after the user hits enter
+
 alias lk='ls -lhSr' #  Sort by size, biggest last.
 
 # tmux
