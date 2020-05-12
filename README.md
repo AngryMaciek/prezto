@@ -1,4 +1,4 @@
-#### My personal fork of Prezto
+### My personal fork of Prezto
 
 *Maciej Bak*  
 *Swiss Institute of Bioinformatics*
@@ -7,9 +7,20 @@ Includes my configuration and extensions setup for the Zsh.
 Original repository: https://github.com/sorin-ionescu/prezto  
 Forked @ commit: `13c61bae30c3a8cf610623c094f2aa0a95fbf035`
 
-Please follow installation instructions described in the original README.md file (below). Whenever neccessary substitute the address to the original repository with an address of this fork.
+#### Installation
+```console
+  # clone the repo:
+  git clone --recursive https://github.com/AngryMaciek/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  # create links to dotfiles:
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
+  # If conda is installed - disable PS1 modification:
+  conda config --set changeps1 False
+```
 
-Modified files:
+#### Modified files:
 | Path | Description |
 |-|-|
 | ./README.md | add header and notes |
@@ -21,7 +32,7 @@ Modified files:
 | ./modules/completion/init.zsh | comment coloring |
 | ./modules/utility/init.zsh | comment coloring |
 
-References:  
+#### References:  
 * https://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/
 * https://blog.siddharthkannan.in/shell/zsh/prezto/2019/04/06/oh-my-zsh-to-prezto/
 * https://scriptingosx.com/2019/06/moving-to-zsh/
