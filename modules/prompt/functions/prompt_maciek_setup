@@ -51,7 +51,7 @@ function prompt_maciek_setup {
     'rprompt' ''
 
   # Define prompts.
-  PROMPT='$(check_conda_env)%B%F${my_yellow}%~ ${(e)git_info[prompt]}$prompt_newline%f%b$ '
+  PROMPT='$(check_conda_env)%B${my_red}%n%F{blue}@${my_green}%m%f %F${my_yellow}%~ ${(e)git_info[prompt]}$prompt_newline%f%b$ '
   RPROMPT=''
 }
 
